@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #fff8e1, #ffc107);
-    color: #333;
+    background: linear-gradient(to bottom, #FFFFFF, #FFFFFF);
+    color: #ffcc80;
 }
 
 .header {
@@ -17,14 +17,14 @@ body {
 }
 
 .header.collapsed {
-    padding: 5px 20px;
+    padding: 1px 5px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
 }
 
 .header-title {
