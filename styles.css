@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #fff8e1, #ffc107);
+    color: #333;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ff6f00;
+    color: white;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.header.collapsed {
+    padding: 5px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.header-nav a:hover {
+    color: #ffd54f;
+}
+
+.catalog-button-wrapper {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.category {
+    padding: 20px;
+}
+
+.category h2 {
+    font-size: 2em;
+    color: #d84315;
+    margin-bottom: 20px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background: white;
+    border: 2px solid #ffcc80;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 330px;
+    height: 280px;
+    border-bottom: 2px solid #ffcc80;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ff6f00;
+}
+
+.item p {
+    font-size: 1em;
+    color: #757575;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.catalog-button {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: silver;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.to-top-button {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: silver;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    transition: background 0.5s;
+}
+
+.catalog-button:hover {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 300% 300%;
+    animation: gradientAnimation 3s ease infinite;
+    color: white;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
