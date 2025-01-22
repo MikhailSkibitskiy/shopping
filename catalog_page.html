@@ -5,15 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - Праздничный экспресс</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Общий стиль для мобильной версии */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                padding: 10px;
+                border-radius: 5px;
+                flex-direction: column;
+            }
+
+            .header-nav.open {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                background: url('menu-icon.png') no-repeat center center;
+                background-size: contain;
+                position: absolute;
+                top: 15px;
+                right: 10px;
+            }
+
+            .menu-close {
+                display: block;
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+                background: url('close-icon.png') no-repeat center center;
+                background-size: contain;
+                align-self: flex-end;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Стандартный стиль для больших экранов */
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="back-button">&#8592; На главную</a>
             <h1 class="header-title">Праздничный экспресс</h1>
-            <a href="about_page.html" class="about-link">О нас</a>
+            <a href="about.html" class="about-link">О нас</a>
+            <div class="menu-toggle" onclick="toggleMenu()"></div>
         </div>
-        <nav class="header-nav">
+        <nav class="header-nav" id="mobile-menu">
+            <div class="menu-close" onclick="toggleMenu()"></div>
             <a href="#new-year">Новый год</a>
             <a href="#defender">День защитника отечества</a>
             <a href="#womens-day">Международный женский день</a>
@@ -397,5 +449,11 @@ HARD LINE
             <a href="#top" class="to-top-button" style="padding-top: 20px">В начало &#8679;</a>
         </div>
     </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
